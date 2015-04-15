@@ -8,12 +8,14 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/flexboxgrid/dist/flexboxgrid.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
+  </head> 
   <body ng-app="abrmsApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -39,6 +41,7 @@
 
             <ul class="nav navbar-nav">
               <li class="active"><a href="#/">Home</a></li>
+              <li><a ng-href="#/EQ_Unit/EN/CB/1?orderBy=eQ_UN_Name">Unit</a></li>
               <li><a ng-href="#/about">About</a></li>
               <li><a ng-href="#/">Contact</a></li>
             </ul>
@@ -47,7 +50,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
     <div ng-view=""></div>
     </div>
 
@@ -80,13 +83,18 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/breeze-client/breeze.debug.js"></script>
+    <script src="bower_components/linqjs/linq.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script src="bower_components/breeze-client/build/adapters/breeze.bridge.angular.js"></script>
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/directives/translator.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/eq_unit.js"></script>
         <!-- endbuild -->
 </body>
 </html>

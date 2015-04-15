@@ -1,0 +1,22 @@
+<p>This is the EQ_Unit view.</p>
+<div ng-if='order'>
+	<i ng-if='!orderDescending' class="fa fa-angle-up">{{order}}</i>
+	<i ng-if='orderDescending' class="fa fa-angle-down">{{order}}</i>
+</div>
+<div class="row" ng-repeat="unit in data">
+	<div class='col-xs-2'>
+		{{unit.eQ_UN_Name}} 
+	</div>
+	<div class='col-xs-4'>		
+		<translator  languages='unit.eQ_Unit_Language' description='eQ_UN_Description'>
+		</translator>
+	</div>
+	<div class='col-xs-2'>
+		{{unit.eQ_UnitClass.eQ_UC_Name}} 
+	</div>
+	<div class='col-xs-4'>		
+		<translator  languages='unit.eQ_UnitClass.eQ_UnitClass_Language' description='eQ_UC_Description'>
+		</translator>
+	</div>
+</div>
+

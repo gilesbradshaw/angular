@@ -28,10 +28,13 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
+      'bower_components/breeze-client/breeze.debug.js',
+      'bower_components/linqjs/linq.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
+      'bower_components/breeze-client/build/adapters/breeze.bridge.angular.js',
       'app/scripts/**/*.js',
-      'test/mock/**/*.js',
+      //'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],
 
@@ -51,12 +54,14 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: [
-      'PhantomJS'
+      'PhantomJS',
+      'Chrome'
     ],
 
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
+      'karma-chrome-launcher',
       'karma-jasmine'
     ],
 
@@ -76,5 +81,7 @@ module.exports = function(config) {
     // },
     // URL root prevent conflicts with the site root
     // urlRoot: '_karma_'
+
+     reporters: ['progress'],
   });
 };
